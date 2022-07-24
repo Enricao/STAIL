@@ -1,0 +1,107 @@
+.container-container {
+  background-color: rgba(0,0,0,0.5);
+}
+
+.webcam-container {
+  border-radius: 0.5rem;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* 
+.webcam {
+  border-radius: 0.5rem;
+  display: block;
+} */
+
+.webcam {
+  border-radius: 0.5rem;
+  flex-shrink: 0;
+  min-width: 100%; 
+  min-height: 100%;
+  width: auto; 
+  height: auto;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.webcam-error {
+  display: none;
+}
+
+.scard .webcam-error {
+  display: block;
+  position: absolute;
+  width: 60%;
+  left: 20%;
+  top: 40%;
+  text-align: center;
+  font-size: 1.5rem;
+  text-shadow: 1px 1px 0px rgba(255,255,255,0.2);
+  opacity: 0.8;
+}
+
+.btn-close {
+  display: block;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+.btn-picture {
+  display: block;
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  bottom: 1rem;
+  left: calc(50% - 1rem);
+  margin: 0;
+  box-shadow: inset 0 0 0 0.1em #fff;
+  border-radius: 50%;
+  opacity: 0.6;
+}
+
+.left-eye, .right-eye {
+  position: absolute;
+  top: 46%;
+  width: 8%;
+  height: 8%;
+  background-color: white;
+  opacity: 0.6;
+  mask: url("../Resources/eye.svg");
+  transition: opacity 1.5s linear;
+  z-index: 1;
+}
+
+.left-eye {
+  left: 34%;
+}
+
+.right-eye {
+  right: 34%;
+}
+
+.left-eye.hidden, .right-eye.hidden {
+  visibility: visible;
+  opacity: 0;
+}
+
+.webcam-cover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.6;
+  color: white;
+  padding: 25% 6rem;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 2s, opacity 0.5s linear;
+}
